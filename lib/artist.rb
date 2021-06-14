@@ -5,12 +5,12 @@ class Artist
 
   def initialize(name)
     @name = name
-    save 
+    save
   end
 
   def save
     @@all << self
-  end 
+  end
 
   def self.all
     @@all
@@ -27,6 +27,7 @@ class Artist
   def self.find_or_create_by_name(name)
     song = self.new
     song.name = name.split
+    save 
     song
   end
 end
