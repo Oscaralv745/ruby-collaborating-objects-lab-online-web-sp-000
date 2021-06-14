@@ -21,7 +21,7 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    song = self.new 
+    song = self.new
     song.name = name.split
     song
   end
